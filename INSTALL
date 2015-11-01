@@ -26,15 +26,12 @@ Basic Installation
 
 `cd' to the directory containing the package's source code and run:
 
-$ ./configure --prefix=/usr
+```
+$ cmake ..
 $ make
 # make install
+```
 
-This will install game binary as /usr/bin/syobon and game data files under
-/usr/share/open-syobon. If you have libfontconfig installed game will search
-for sazanamy-gothic.ttf in default system font path; you can override this
-behaviour to use builtin font, you also can install icon and desktop entry
-files (see output of `configure --help' for instructions).
-
-To remove game run:
-# make uninstall
+If you want to build with MinGW you'll need to pass `-G"MinGW Makefiles"` to
+cmake, for MSVC/NMake `-G"NMake Makefiles"`. `cmake --help` for a list of
+all supported generators.
