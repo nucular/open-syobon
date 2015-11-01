@@ -54,23 +54,23 @@ grap[t][tt]=0;
 //	GetCurrentDirectory(255, currentdir);
 //	fprintf(stderr, "dir: %s\n", currentdir);
 
-    mgrap[0] = LoadGraph(GAMEDATA"/res/player.PNG");
+    mgrap[0] = LoadGraph(GAMEDATA"/GFX/player.PNG");
 //Block (ブロック)
-    mgrap[1] = LoadGraph(GAMEDATA"/res/brock.PNG");
+    mgrap[1] = LoadGraph(GAMEDATA"/GFX/brock.PNG");
 //Items (アイテム)
-    mgrap[2] = LoadGraph(GAMEDATA"/res/item.PNG");
+    mgrap[2] = LoadGraph(GAMEDATA"/GFX/item.PNG");
 //Enemy (敵)
-    mgrap[3] = LoadGraph(GAMEDATA"/res/teki.PNG");
+    mgrap[3] = LoadGraph(GAMEDATA"/GFX/teki.PNG");
 //Background (背景)
-    mgrap[4] = LoadGraph(GAMEDATA"/res/haikei.PNG");
+    mgrap[4] = LoadGraph(GAMEDATA"/GFX/haikei.PNG");
 //Block 2 (ブロック2)
-    mgrap[5] = LoadGraph(GAMEDATA"/res/brock2.PNG");
+    mgrap[5] = LoadGraph(GAMEDATA"/GFX/brock2.PNG");
 //Bonus (おまけ)
-    mgrap[6] = LoadGraph(GAMEDATA"/res/omake.PNG");
+    mgrap[6] = LoadGraph(GAMEDATA"/GFX/omake.PNG");
 //Bonus 2 (おまけ2)
-    mgrap[7] = LoadGraph(GAMEDATA"/res/omake2.PNG");
+    mgrap[7] = LoadGraph(GAMEDATA"/GFX/omake2.PNG");
 //Title (タイトル)
-    mgrap[30] = LoadGraph(GAMEDATA"/res/syobon3.PNG");
+    mgrap[30] = LoadGraph(GAMEDATA"/GFX/syobon3.PNG");
 
 
 //プレイヤー読み込み

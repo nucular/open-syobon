@@ -181,7 +181,7 @@ void SetFontSize(byte size) {
         FcPatternDestroy(match);
         FcPatternDestroy(pat);
 #else
-        font[size] = TTF_OpenFont(GAMEDATA"/res/sazanami-gothic.ttf", size);
+        font[size] = TTF_OpenFont(GAMEDATA"/sazanami-gothic.ttf", size);
 #endif
         if (font[size] == NULL) {
             printf("Unable to load font: %s\n", TTF_GetError());
