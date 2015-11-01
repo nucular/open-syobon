@@ -16,32 +16,32 @@ void loadg();
 //: The new define is after the main method
 int mainZ = 100, maintm = 0;
 
-//ステージ
+//Stage (ステージ)
 int stagecolor = 1;
 int stageselect = false;
 int sta = 1, stb = 4, stc = 0;
 
-//クイック
+//Fast (クイック)
 int fast = 1;
 
-//トラップ表示
+//Show trap? (トラップ表示)
 int trap = 1;
 
-//中間ゲート
+//Intermediate gate (中間ゲート)
 int tyuukan = 0;
 
-//スタッフロール
+//Ending credits (スタッフロール)
 int ending = 0;
 
-//ステージ読み込みループ(いじらない)
+//Stage reading loop (not modified?) (ステージ読み込みループ(いじらない))
 int stagerr, stagepoint;
-//オーバーフローさせる
+//To overflow? (オーバーフローさせる)
 int over = 0;
 
-//ステージスイッチ
+//Stage switch (ステージスイッチ)
 int stageonoff = 0;
 
-//メインプログラム
+//Main program (メインプログラム)
 void Mainprogram();
 void rpaint();
 int maint;
@@ -53,7 +53,7 @@ void wait2(long stime, long etime, int FLAME_TIME);
 int rand(int Rand);
 void end();
 
-//描画
+//Drawing (描画)
 Uint32 color;
 Uint32 gfxcolor;
 void setfont(int a);
@@ -99,30 +99,30 @@ void stagecls();
 void stage();
 void stagep();
 
-//1-ステージ
-//10-ステージ前
+//1-stage (1-ステージ)
+//10-stage before? (10-ステージ前)
 //
 
-//ループ
+//Loop counters (ループ)
 int t, tt, t1, t2, t3, t4;
 
-//初期化
+//Initialization (初期化)
 int zxon, zzxon;
 
-//キーコンフィグ
+//Key Configuration (キーコンフィグ)
 int key, keytm;
 
-//三角関数
+//Trigonometric functions (三角関数)
 double pai = 3.1415926535;
 
-//地面
+//Ground (地面)
 #define smax 31
 int sx, sco;
 int sa[smax], sb[smax], sc[smax], sd[smax], stype[smax], sxtype[smax],
 sr[smax];
 int sgtype[smax];
 
-//プレイヤー
+//Player (プレイヤー)
 int mainmsgtype;
 int ma, mb, mnobia, mnobib, mhp;
 int mc, md, macttype, atkon, atktm, mactsok, msstar, nokori =
@@ -133,7 +133,7 @@ int mzimen, mrzimen, mkasok, mmuki, mmukitm, mjumptm, mkeytm, mcleartm;
 int mmutekitm, mmutekion;
 int mztm, mztype;
 int actaon[7];
-//メッセージ
+//Message (メッセージ)
 int mmsgtm, mmsgtype;
 
 int mascrollmax = 21000; //9000

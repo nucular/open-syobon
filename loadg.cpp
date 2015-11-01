@@ -43,33 +43,33 @@ grap[t][tt]=0;
 //end();
 
 
-//画像読み込み
+//Image loading (画像読み込み)
 
-// 透過色を変更
+// Set transparent color (透過色を変更)
 //SetTransColor( 9*16+9 , 255 , 255 ) ;
 
-//プレイヤー
+//Player (プレイヤー)
 	/* XXX */
 //	char currentdir[255];
 //	GetCurrentDirectory(255, currentdir);
 //	fprintf(stderr, "dir: %s\n", currentdir);
 
     mgrap[0] = LoadGraph(GAMEDATA"/res/player.PNG");
-//ブロック
+//Block (ブロック)
     mgrap[1] = LoadGraph(GAMEDATA"/res/brock.PNG");
-//アイテム
+//Items (アイテム)
     mgrap[2] = LoadGraph(GAMEDATA"/res/item.PNG");
-//敵
+//Enemy (敵)
     mgrap[3] = LoadGraph(GAMEDATA"/res/teki.PNG");
-//背景
+//Background (背景)
     mgrap[4] = LoadGraph(GAMEDATA"/res/haikei.PNG");
-//ブロック2
+//Block 2 (ブロック2)
     mgrap[5] = LoadGraph(GAMEDATA"/res/brock2.PNG");
-//おまけ
+//Bonus (おまけ)
     mgrap[6] = LoadGraph(GAMEDATA"/res/omake.PNG");
-//おまけ2
+//Bonus 2 (おまけ2)
     mgrap[7] = LoadGraph(GAMEDATA"/res/omake2.PNG");
-//タイトル
+//Title (タイトル)
     mgrap[30] = LoadGraph(GAMEDATA"/res/syobon3.PNG");
 
 

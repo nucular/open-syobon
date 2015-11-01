@@ -6,7 +6,7 @@
 
 #include "main.h"
 
-// プログラムは WinMain から始まります
+// The program will start from WinMain (プログラムは WinMain から始まります)
 //Changed to ansi c++ main()
 
 int main(int argc, char *argv[]) {
@@ -27,14 +27,14 @@ int main(int argc, char *argv[]) {
     if (DxLib_Init(windowmode) == -1)
         return 1;
 
-    //全ロード
+    //Load everything (全ロード)
     loadg();
 
-    //フォント
+    //Font (フォント)
     SetFontSize(16);
     //SetFontThickness(4) ;
 
-    //ループ
+    //Loop (ループ)
     //for (maint=0;maint<=2;maint++){
     while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0) {
         UpdateKeys();
@@ -44,17 +44,17 @@ int main(int argc, char *argv[]) {
             break;
     }
 
-    //ＤＸライブラリ使用の終了処理
+    //Deinitialize DX library (ＤＸライブラリ使用の終了処理)
     end();
 
     return (0);
 }
 
-//メイン描画
+//Main drawing (メイン描画)
 
 void rpaint() {
 
-    //ダブルバッファリング
+    //Double buffering (ダブルバッファリング)
     setcolor(0, 0, 0);
     //if (stagecolor==1)setcolor(170,170,255);
     if (stagecolor == 1)
@@ -77,7 +77,7 @@ void rpaint() {
 
     if (mainZ == 1 && zxon >= 1) {
 
-        //背景
+        //Background (背景)
         for (t = 0; t < nmax; t++) {
             xx[0] = na[t] - fx;
             xx[1] = nb[t] - fy;
@@ -126,7 +126,7 @@ void rpaint() {
             }
         } //t
 
-        //グラ
+        //Grad? (グラ)
         for (t = 0; t < emax; t++) {
             xx[0] = ea[t] - fx;
             xx[1] = eb[t] - fy;
@@ -135,11 +135,11 @@ void rpaint() {
             if (xx[0] + xx[2] * 100 >= -10 && xx[1] <= fxmax
                     && xx[1] + xx[3] * 100 >= -10 - 8000 && xx[3] <= fymax) {
 
-                //コイン
+                //Coin (コイン)
                 if (egtype[t] == 0)
                     drawimage(grap[0][2], xx[0] / 100, xx[1] / 100);
 
-                //ブロックの破片
+                //Block debris (ブロックの破片)
                 if (egtype[t] == 1) {
                     if (stagecolor == 1 || stagecolor == 3
                             || stagecolor == 5)
@@ -153,14 +153,14 @@ void rpaint() {
                     setcolor(0, 0, 0);
                     drawarc(xx[0] / 100, xx[1] / 100, 7, 7);
                 }
-                //リフトの破片
+                //Lift debris (リフトの破片)
                 if (egtype[t] == 2 || egtype[t] == 3) {
                     if (egtype[t] == 3)
                         mirror = 1;
                     drawimage(grap[0][5], xx[0] / 100, xx[1] / 100);
                     mirror = 0;
                 }
-                //ポール
+                //Pole (ポール)
                 if (egtype[t] == 4) {
                     setc1();
                     fillrect((xx[0]) / 100 + 10, (xx[1]) / 100, 10, xx[3]);
@@ -175,7 +175,7 @@ void rpaint() {
             }
         }
 
-        //リフト
+        //Lift (リフト)
         for (t = 0; t < srmax; t++) {
             xx[0] = sra[t] - fx;
             xx[1] = srb[t] - fy;
@@ -239,7 +239,7 @@ void rpaint() {
             }
         } //t
 
-        //プレイヤー描画
+        //Player drawing (プレイヤー描画)
         setcolor(0, 0, 255);
 
         if (mactp >= 2000) {
@@ -255,7 +255,7 @@ void rpaint() {
 
         if (mtype != 200 && mtype != 1) {
             if (mzimen == 1) {
-                // 読みこんだグラフィックを拡大描画
+                // A larger graphic? (読みこんだグラフィックを拡大描画)
                 if (mact == 0)
                     drawimage(grap[0][0], ma / 100, mb / 100);
                 if (mact == 1)
@@ -264,7 +264,7 @@ void rpaint() {
             if (mzimen == 0) {
                 drawimage(grap[2][0], ma / 100, mb / 100);
             }
-        }            //巨大化
+        }            //Huge technology? (巨大化)
         else if (mtype == 1) {
             drawimage(grap[41][0], ma / 100, mb / 100);
         }
@@ -274,7 +274,7 @@ void rpaint() {
 
         mirror = 0;
 
-        //敵キャラ
+        //Enemy character (敵キャラ)
         for (t = 0; t < amax; t++) {
 
             xx[0] = aa[t] - fx;
@@ -302,7 +302,7 @@ void rpaint() {
                 if (atype[t] >= 100 && amuki[t] == 1)
                     mirror = 0;
 
-                //メイン
+                //Main (メイン)
                 if (atype[t] < 200 && xx[16] == 0
                         && atype[t] != 6 && atype[t] != 79
                         && atype[t] != 86 && atype[t] != 30) {
@@ -312,7 +312,7 @@ void rpaint() {
                                 xx[0] / 100, xx[1] / 100);
                     }
                 }
-                //デフラグさん
+                //Mr. Defragmentation (デフラグさん)
                 if (atype[t] == 6) {
                     if (atm[t] >= 10 && atm[t] <= 19
                             || atm[t] >= 100 && atm[t] <= 119
@@ -322,14 +322,14 @@ void rpaint() {
                         drawimage(grap[6][3], xx[0] / 100, xx[1] / 100);
                     }
                 }
-                //モララー
+                //Morara (モララー)
                 if (atype[t] == 30) {
                     if (axtype[t] == 0)
                         drawimage(grap[30][3], xx[0] / 100, xx[1] / 100);
                     if (axtype[t] == 1)
                         drawimage(grap[155][3], xx[0] / 100, xx[1] / 100);
                 }
-                //ステルス雲
+                //Stealth cloud (ステルス雲)
                 if ((atype[t] == 81) && axtype[t] == 1) {
                     drawimage(grap[130][3], xx[0] / 100, xx[1] / 100);
                 }
@@ -415,7 +415,7 @@ void rpaint() {
                     }
 
                 }
-                //偽ポール
+                //Fake Pole (偽ポール)
                 if (atype[t] == 85) {
                     setc1();
                     fillrect((xx[0]) / 100 + 10, (xx[1]) / 100, 10, xx[3]);
@@ -428,7 +428,7 @@ void rpaint() {
 
                 } //85
 
-                //ニャッスン
+                //Nyassun (ニャッスン)
                 if (atype[t] == 86) {
                     if (ma >= aa[t] - fx - mnobia - 4000
                             && ma <= aa[t] - fx + anobia[t] + 4000) {
@@ -446,7 +446,7 @@ void rpaint() {
             }
         }
 
-        //ブロック描画
+        //Block drawing (ブロック描画)
         for (t = 0; t < tmax; t++) {
             xx[0] = ta[t] - fx;
             xx[1] = tb[t] - fy;
@@ -513,7 +513,7 @@ void rpaint() {
                     xx[6] = 1 + xx[9];
                     drawimage(grap[xx[6]][1], xx[0] / 100, xx[1] / 100);
                 }
-                //ジャンプ台
+                //Jump ramp (ジャンプ台)
                 if (ttype[t] == 120 && txtype[t] != 1) {
                     drawimage(grap[16][1], xx[0] / 100 + 3,
                             xx[1] / 100 + 2);
@@ -534,11 +534,11 @@ void rpaint() {
                 if (ttype[t] == 300 || ttype[t] == 301)
                     drawimage(grap[1][5], xx[0] / 100, xx[1] / 100);
 
-                //Pスイッチ
+                //P switch (Pスイッチ)
                 if (ttype[t] == 400) {
                     drawimage(grap[2][5], xx[0] / 100, xx[1] / 100);
                 }
-                //コイン
+                //Coin (コイン)
                 if (ttype[t] == 800) {
                     drawimage(grap[0][2], xx[0] / 100 + 2,
                             xx[1] / 100 + 1);
@@ -546,7 +546,7 @@ void rpaint() {
             }
         }
 
-        //地面(壁)//土管も
+        //Ground wall and pipes (地面(壁)//土管も)
         for (t = 0; t < smax; t++) {
             if (sa[t] - fx + sc[t] >= -10 && sa[t] - fx <= fxmax + 1100) {
 
@@ -559,7 +559,7 @@ void rpaint() {
                             (sb[t] - fy) / 100 + fmb,
                             sc[t] / 100, sd[t] / 100);
                 }
-                //土管
+                //Pipe (土管)
                 if (stype[t] == 1) {
                     setcolor(0, 230, 0);
                     fillrect((sa[t] - fx) / 100 + fma,
@@ -570,7 +570,7 @@ void rpaint() {
                             (sb[t] - fy) / 100 + fmb,
                             sc[t] / 100, sd[t] / 100);
                 }
-                //土管(下)
+                //Pipe (down) (土管(下))
                 if (stype[t] == 2) {
                     setcolor(0, 230, 0);
                     fillrect((sa[t] - fx) / 100 + fma,
@@ -588,7 +588,7 @@ void rpaint() {
                             sc[t] / 100,
                             (sb[t] - fy) / 100 + fmb + sd[t] / 100);
                 }
-                //土管(横)
+                //Pipe (horizontal) (土管(横))
                 if (stype[t] == 5) {
                     setcolor(0, 230, 0);
                     fillrect((sa[t] - fx) / 100 + fma,
@@ -606,7 +606,7 @@ void rpaint() {
                             sc[t] / 100,
                             (sb[t] - fy) / 100 + fmb + sd[t] / 100);
                 }
-                //落ちてくるブロック
+                //Falling blocks (落ちてくるブロック)
                 if (stype[t] == 51) {
                     if (sxtype[t] == 0) {
                         for (t3 = 0; t3 <= sc[t] / 3000; t3++) {
@@ -653,7 +653,7 @@ void rpaint() {
 
                 } //51
 
-                //落ちるやつ
+                //Falling guy? (落ちるやつ)
                 if (stype[t] == 52) {
                     xx[29] = 0;
                     if (stagecolor == 2) {
@@ -723,7 +723,7 @@ void rpaint() {
 
                     }
                 }
-                //ステージトラップ
+                //Stage trap? (ステージトラップ)
                 if (trap == 1) {
                     if (stype[t] >= 100 && stype[t] <= 299) {
                         if (stagecolor == 1
@@ -737,7 +737,7 @@ void rpaint() {
                                 fmb, sc[t] / 100, sd[t] / 100);
                     }
                 }
-                //ゴール
+                //Goal (ゴール)
                 if (stype[t] == 300) {
                     setc1();
                     fillrect((sa[t] - fx) / 100 + 10,
@@ -760,11 +760,11 @@ void rpaint() {
             }
         } //t
 
-        //描画上書き(土管)
+        //Overdrawing (Pipe)? (描画上書き(土管))
         for (t = 0; t < smax; t++) {
             if (sa[t] - fx + sc[t] >= -10 && sa[t] - fx <= fxmax + 1100) {
 
-                //入る土管(右)
+                //Entering pipe (right) (入る土管(右))
                 if (stype[t] == 40) {
                     setcolor(0, 230, 0);
                     fillrect((sa[t] - fx) / 100 + fma,
@@ -775,7 +775,7 @@ void rpaint() {
                             (sb[t] - fy) / 100 + fmb + 1,
                             sc[t] / 100, sd[t] / 100);
                 }
-                //とぶ土管
+                //The flying pipe? (とぶ土管)
                 if (stype[t] == 50) {
                     setcolor(0, 230, 0);
                     fillrect((sa[t] - fx) / 100 + fma + 5,
@@ -799,7 +799,7 @@ void rpaint() {
                     drawrect((sa[t] - fx) / 100 + fma,
                             (sb[t] - fy) / 100 + fmb + 1, 60, 30);
                 }
-                //地面(ブロック)
+                //Ground (block) (地面(ブロック))
                 if (stype[t] == 200) {
                     for (t3 = 0; t3 <= sc[t] / 3000; t3++) {
                         for (t2 = 0; t2 <= sd[t] / 3000; t2++) {
@@ -815,7 +815,7 @@ void rpaint() {
             }
         } //t
 
-        //ファイアバー
+        //Fire Bar (ファイアバー)
         for (t = 0; t < amax; t++) {
 
             xx[0] = aa[t] - fx;
@@ -858,7 +858,7 @@ void rpaint() {
             }
         }
 
-        //プレイヤーのメッセージ
+        //Player message (プレイヤーのメッセージ)
         setc0();
         if (mmsgtm >= 1) {
             mmsgtm--;
@@ -895,7 +895,7 @@ void rpaint() {
 
         } //mmsgtm
 
-        //敵キャラのメッセージ
+        //Enemy character message (敵キャラのメッセージ)
         setc0();
         for (t = 0; t < amax; t++) {
             if (amsgtm[t] >= 1) {
@@ -1018,7 +1018,7 @@ void rpaint() {
             } //amsgtm
         } //amax
 
-        //メッセージブロック
+        //Message block (メッセージブロック)
         if (tmsgtm > 0) {
             ttmsg();
             if (tmsgtype == 1) {
@@ -1050,7 +1050,7 @@ void rpaint() {
             tmsgtm--;
         } //tmsgtm
 
-        //メッセージ
+        //Message (メッセージ)
         if (mainmsgtype >= 1) {
             setfont(20, 4);
             if (mainmsgtype == 1) {
@@ -1066,7 +1066,7 @@ void rpaint() {
             setfont(20, 5);
         } //mainmsgtype>=1
 
-        //画面黒
+        //Black screen (画面黒)
         if (blacktm > 0) {
             blacktm--;
             fillrect(0, 0, fxmax, fymax);
@@ -1123,7 +1123,7 @@ void rpaint() {
                 nokori);
 
     }
-    //タイトル
+    //Title (タイトル)
     /* main menu */
     if (mainZ == 100) {
         setcolor(160, 180, 250);
@@ -1134,7 +1134,7 @@ void rpaint() {
         drawimage(grap[0][4], 12 * 30, 10 * 29 - 12);
         drawimage(grap[1][4], 6 * 30, 12 * 29 - 12);
 
-        //プレイヤー
+        //Player (プレイヤー)
         drawimage(grap[0][0], 2 * 30, 12 * 29 - 12 - 6);
         for (t = 0; t <= 16; t++) {
             drawimage(grap[5][1], 29 * t, 13 * 29 - 12);
@@ -1156,7 +1156,7 @@ void rpaint() {
 
 } //rpaint()
 
-//メインプログラム
+//Main program (メインプログラム)
 
 void Mainprogram() {
 
@@ -1165,7 +1165,7 @@ void Mainprogram() {
     if (ending == 1)
         mainZ = 2;
 
-    //キー
+    //Key (キー)
 
     if (mainZ == 1 && tmsgtype == 0) {
 
@@ -1190,14 +1190,14 @@ void Mainprogram() {
             fzx = 0;
             stageonoff = 0;
 
-            //チーターマン　入れ
+            //Cheetah Man Put?? (チーターマン　入れ)
             bgmchange(otom[1]);
 
             stagecls();
 
             stage();
 
-            //ランダムにさせる
+            //I'm random? (ランダムにさせる)
             if (over == 1) {
                 for (t = 0; t < tmax; t++) {
                     if (rand(3) <= 1) {
@@ -1237,7 +1237,7 @@ void Mainprogram() {
 
         } //zxon
 
-        //プレイヤーの移動
+        //Player movement (プレイヤーの移動)
         xx[0] = 0;
         actaon[2] = 0;
         actaon[3] = 0;
@@ -1294,7 +1294,7 @@ void Mainprogram() {
                 ) {
             if (mjumptm == 8 && md >= -900) {
                 md = -1300;
-                //ダッシュ中
+                //In the air (ダッシュ中)
                 xx[22] = 200;
                 if (mc >= xx[22] || mc <= -xx[22]) {
                     md = -1400;
@@ -1316,7 +1316,7 @@ void Mainprogram() {
         //if (actaon[0]==-1){ma-=xx[0];}
         //if (actaon[0]==1){ma+=xx[0];}
 
-        //加速による移動
+        //Movement acceleration (加速による移動)
         xx[0] = 40;
         xx[1] = 700;
         xx[8] = 500;
@@ -1324,7 +1324,7 @@ void Mainprogram() {
         xx[12] = 1;
         xx[13] = 2;
 
-        //すべり補正
+        //Slip compensation (すべり補正)
         if (mrzimen == 1) {
             xx[0] = 20;
             xx[12] = 9;
@@ -1388,11 +1388,11 @@ void Mainprogram() {
         if (mkasok > 8) {
             mkasok = 8;
         }
-        //すべり補正初期化
+        //Slip correction initialization (すべり補正初期化)
         if (mzimen != 1)
             mrzimen = 0;
 
-        //ジャンプ
+        //Jump (ジャンプ)
         if (mjumptm >= 0)
             mjumptm--;
         if (actaon[1] == 1 && mzimen == 1) {
@@ -1427,12 +1427,12 @@ void Mainprogram() {
 
         //if (actaon[1]==1){my+=xx[1];actaon[1]=0;}
 
-        //}//陸地
+        //}//Land (陸地)
 
         if (mmutekitm >= -1)
             mmutekitm--;
 
-        //HPがなくなったとき
+        //When HP is zero (HPがなくなったとき)
         if (mhp <= 0 && mhp >= -9) {
             mkeytm = 12;
             mhp = -20;
@@ -1466,7 +1466,7 @@ void Mainprogram() {
             } //mtm>=100
         } //mtype==200
 
-        //音符によるワープ
+        //The warp? (音符によるワープ)
         if (mtype == 2) {
             mtm++;
 
@@ -1484,7 +1484,7 @@ void Mainprogram() {
             }
         } //2
 
-        //ジャンプ台アウト
+        //Jump out (ジャンプ台アウト)
         if (mtype == 3) {
             md = -2400;
             if (mb <= -6000) {
@@ -4808,7 +4808,7 @@ void setcolor(int red, int green, int blue) {
     gfxcolor = red << 8 * 3 | green << 8 * 2 | blue << 8 | 0xFF;
 }
 
-//色かえ(黒)(白)
+//Color change (black/white) (色かえ(黒)(白))
 
 void setc0() {
     setcolor(0, 0, 0);
