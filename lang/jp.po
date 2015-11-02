@@ -1,4 +1,4 @@
-# Japaness translations for open-syobon package
+# Japanese translations for open-syobon package
 # Copyright (C) 2012 Alexander R.
 # This file is distributed under the same license as the open-syobon package.
 #  <alexander.r@gmx.com>, 2012.
@@ -11,7 +11,7 @@ msgstr ""
 "PO-Revision-Date: 2012-04-07 17:58+1100\n"
 "Last-Translator:  <alexander.r@gmx.com>\n"
 "Language-Team: Russian\n"
-"Language: ru\n"
+"Language: jp\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,7 +39,7 @@ msgstr "食べるべきではなかった!!"
 msgid "I'm burning!"
 msgstr "俺は燃える男だ!!"
 
-msgid "I'm burning!..."
+msgid "I'm...burning..."
 msgstr "体が……焼ける……"
 
 msgid "Bleh!"
@@ -51,7 +51,7 @@ msgstr "見事にオワタ"
 msgid "Legs, get feet!"
 msgstr "足が、足がぁ!!"
 
-msgid "800°C!"
+msgid "800C!"
 msgstr "流石は摂氏800度!!"
 
 msgid "I hate lava.."
@@ -240,19 +240,19 @@ msgstr "気をつけてくれよ〜"
 msgid "You might want to use some items."
 msgstr "後、アイテムの一部を利用するかも…"
 
-msgid "                   -Chikuwa"
+msgid "-Chikuwa"
 msgstr "                       ちく より"
 
-msgid "[?] required :)"
+msgid "[?] required"
 msgstr "            ？が必要です "
 
-msgid "          (^Д^) - m9"
+msgid "-m9"
 msgstr "                         m9(^Д^)"
 
 msgid "Money money, dirty money.."
 msgstr "   別にコインに意味ないけどね "
 
-msgid "                             (・ω・) -Noshi"
+msgid "-Noshi"
 msgstr "                      (・ω・ )ﾉｼ"
 
 msgid "The first block is hidden"
@@ -261,13 +261,13 @@ msgstr "この先に隠しブロックがあります "
 msgid "Take note!"
 msgstr "注意してください !!"
 
-msgid "I lovered the difficulty from the"
+msgid "I lowered the difficulty from the"
 msgstr " 前回よりも難易度を下げましたので"
 
 msgid "previous one. Take it easy."
 msgstr " 気楽にプレイしてください    "
 
-msgid "                                    -Chikuwa"
+msgid "-Chikuwa2"
 msgstr "                       ちく より"
 
 msgid "The enemy nearby jumps along"
@@ -321,8 +321,8 @@ msgstr "いやぁ、ただの通りすがりの"
 msgid "I tip the block"
 msgstr "ヒントブロックですよ〜"
 
-msgid "Is not it strange never block"
+msgid "Isn't it a strange block?"
 msgstr "決して怪しいブロックじゃないですよ"
 
-msgid "                 (Chip)"
+msgid "(Chip)"
 msgstr "                          (…チッ)"

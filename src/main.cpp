@@ -10,6 +10,7 @@
 //Changed to ansi c++ main()
 
 int main(int argc, char *argv[]) {
+    char *locale = (char*)"";
     int windowmode = false;
 
     if (argc > 1) {
@@ -18,9 +19,20 @@ int main(int argc, char *argv[]) {
         for (i = 1; i < argc; i++) {
             if (!strcmp("-window", argv[i])) {
                 windowmode = true;
+            } else if (!strcmp("-lang", argv[i]) && i < argc) {
+                locale = argv[i + 1];
+                i++;
+            } else if (!strcmp("-h", argv[i]) || !strcmp("--help", argv[i])) {
+                printf("usage:\n  %s [-window] [-lang LANG]\n", argv[0]);
+                return 1;
             }
         }
     }
+
+    setlocale(LC_ALL, locale);
+    bindtextdomain(PACKAGE, LOCALEDIR);
+    textdomain(PACKAGE);
+
     //Now define the 'main' alias
     //#define main mainZ
 
@@ -875,7 +887,7 @@ void rpaint() {
             if (mmsgtype == 11)
                 xs[0] = _("I'm burning!");
             if (mmsgtype == 50)
-                xs[0] = _("I'm burning!...");
+                xs[0] = _("I'm...burning...");
             if (mmsgtype == 51)
                 xs[0] = _("Bleh!");
             if (mmsgtype == 52)
@@ -883,7 +895,7 @@ void rpaint() {
             if (mmsgtype == 53)
                 xs[0] = _("Legs, get feet!");
             if (mmsgtype == 54)
-                xs[0] = _("800°C!");
+                xs[0] = _("800C!");
             if (mmsgtype == 55)
                 xs[0] = _("I hate lava..");
 
@@ -1103,7 +1115,7 @@ void rpaint() {
         str(_("Video capture encoding and editing"),
                 240 - 16 * 20 / 2, xx[26] / 100);
         str("willowlet ", 240 - 5 * 20 / 2, xx[27] / 100);
-        str(_("Graphics program"),
+        str(_("Programming and drawing"),
                 240 - 16 * 20 / 2, xx[28] / 100);
         str(_("Chikuwa"), 240 - 2 * 20 / 2, xx[29] / 100);
 
@@ -10541,17 +10553,17 @@ void ttmsg() {
             txmsg(_("Nothing special, just"), 1);
             txmsg(_("take good care of me."), 2);
             txmsg(_("You might want to use some items."), 4);
-            txmsg(_("                   -Chikuwa"), 6);
+            txmsg(_("-Chikuwa"), 6);
         }
 
         if (tmsg == 2) {
-            txmsg(_("[?] required :)"), 3);
-            txmsg(_("          (^Д^) - m9"), 6);
+            txmsg(_("[?] required"), 3);
+            txmsg(_("-m9"), 6);
         }
 
         if (tmsg == 3) {
             txmsg(_("Money money, dirty money.."), 3);
-            txmsg(_("                             (・ω・) -Noshi"), 6);
+            txmsg(_("-Noshi"), 6);
         }
 
         if (tmsg == 4) {
@@ -10561,9 +10573,9 @@ void ttmsg() {
 
         if (tmsg == 5) {
             txmsg("", 0);
-            txmsg(_("I lovered the difficulty from the"), 1);
+            txmsg(_("I lowered the difficulty from the"), 1);
             txmsg(_("previous one. Take it easy."), 3);
-            txmsg(_("                                    -Chikuwa"), 6);
+            txmsg(_("-Chikuwa2"), 6);
         }
 
         if (tmsg == 6) {
@@ -10601,8 +10613,8 @@ void ttmsg() {
             txmsg(_("What? Me?"), 0);
             txmsg(_("Well, just passing"), 2);
             txmsg(_("I tip the block"), 3);
-            txmsg(_("Is not it strange never block"), 5);
-            txmsg(_("                 (Chip)"), 6);
+            txmsg(_("Isn't it a strange block?"), 5);
+            txmsg(_("(Chip)"), 6);
         }
 
         setfont(16, 4);

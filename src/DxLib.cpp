@@ -9,11 +9,6 @@ SDL_Surface *scale_screen;
 bool keysHeld[SDLK_LAST];
 
 int DxLib_Init(int windowmode) {
-    /*setlocale (LC_ALL, "");
-        #bindtextdomain (PACKAGE, LOCALEDIR);
-        #textdomain (PACKAGE);
-     */
-
     if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
         printf("Unable to init SDL: %s\n", SDL_GetError());
         return -1;

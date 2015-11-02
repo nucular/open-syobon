@@ -1,0 +1,319 @@
+# English translations for open-syobon package
+# This file is distributed under the same license as the open-syobon package.
+msgid ""
+msgstr ""
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Clear Play"
+msgstr "Clear Play"
+
+msgid "Thanks for playing"
+msgstr "Thanks for playing"
+
+msgid "You're good!"
+msgstr "You're good!"
+
+msgid "No effect"
+msgstr "No effect"
+
+msgid "Stuck!"
+msgstr "Stuck!"
+
+msgid "Poison!"
+msgstr "Poison!"
+
+msgid "I'm burning!"
+msgstr "I'm burning!"
+
+msgid "I'm...burning..."
+msgstr "I'm...burning..."
+
+msgid "Bleh!"
+msgstr "Bleh!"
+
+msgid "Blah!"
+msgstr "Blah!"
+
+msgid "Legs, get feet!"
+msgstr "Legs, get feet!"
+
+msgid "800C!"
+msgstr "800°C!"
+
+msgid "I hate lava.."
+msgstr "I hate lava.."
+
+msgid "Banzai!"
+msgstr "Banzai!"
+
+msgid "I win!"
+msgstr "I win!"
+
+msgid "Die!"
+msgstr "Die!"
+
+msgid "Bye bye!"
+msgstr "Bye bye!"
+
+msgid "I'm the strongest!"
+msgstr "I'm the strongest!"
+
+msgid "Too bad!"
+msgstr "Too bad!"
+
+msgid "Try again!"
+msgstr "Try again!"
+
+msgid "Hahaha!"
+msgstr "Hahaha!"
+
+msgid "Don't forget me!"
+msgstr "Don't forget me!"
+
+msgid "Caught!"
+msgstr "Caught!"
+
+msgid "Woohoo!"
+msgstr "Woohoo!"
+
+msgid "Wasted!"
+msgstr "Wasted!"
+
+msgid "Reckless.."
+msgstr "Reckless.."
+
+msgid "Woot!"
+msgstr "Woot!"
+
+msgid "I'm the winner!"
+msgstr "I'm the winner!"
+
+msgid "See you!"
+msgstr "See you!"
+
+msgid "Har!"
+msgstr "Har!"
+
+msgid "You lose!"
+msgstr "You lose!"
+
+msgid "You're too weak!"
+msgstr "You're too weak!"
+
+msgid "Die in a painful death!"
+msgstr "Die in a painful death!"
+
+msgid "Mission complete!"
+msgstr "Mission complete!"
+
+msgid "Did I win?"
+msgstr "Did I win?"
+
+msgid "This is your place to die!"
+msgstr "This is your place to die!"
+
+msgid "Watch me!"
+msgstr "Watch me!"
+
+msgid "Fatality!"
+msgstr "Fatality!"
+
+msgid "Be happy!"
+msgstr "Be happy!"
+
+msgid "Scraps!"
+msgstr "Scraps!"
+
+msgid "I'm invincible!"
+msgstr "I'm invincible!"
+
+msgid "I'm not even armed!"
+msgstr "I'm not even armed!"
+
+msgid "Booh!"
+msgstr "Booh!"
+
+msgid "Caught!..."
+msgstr "Caught!..."
+
+msgid "Poing!"
+msgstr "Poing!"
+
+msgid "Eaten!"
+msgstr "Eaten!"
+
+msgid "Oh yeah!"
+msgstr "Oh yeah!"
+
+msgid "Woops?"
+msgstr "Woops?"
+
+msgid "Shaking!"
+msgstr "Shaking!"
+
+msgid "Wave the gun!"
+msgstr "Wave the gun!"
+
+msgid "Do you think she cheated?"
+msgstr "Do you think she cheated?"
+
+msgid "Yabadabadoo!"
+msgstr "Yabadabadoo!"
+
+msgid "People involved in production"
+msgstr "People involved in production"
+
+msgid "Stage 1 design"
+msgstr "Stage 1 design"
+
+msgid "Stage 2 design"
+msgstr "Stage 2 design"
+
+msgid "My friend willowlet"
+msgstr "My friend willowlet"
+
+msgid "Stage 3 design"
+msgstr "Stage 3 design"
+
+msgid "Stage 4 design"
+msgstr "Stage 4 design"
+
+msgid "My friend ann"
+msgstr "My friend ann"
+
+msgid "Cooperation"
+msgstr "Cooperation"
+
+msgid "Senior T"
+msgstr "Senior T"
+
+msgid "Senior S"
+msgstr "Senior S"
+
+msgid "Video technology"
+msgstr "Video technology"
+
+msgid "Senior K"
+msgstr "Senior K"
+
+msgid "Video capture encoding and editing"
+msgstr "Video capture encoding and editing"
+
+msgid "Programming and drawing"
+msgstr "Programming and drawing"
+
+msgid "Chikuwa"
+msgstr "Chikuwa"
+
+msgid "Thank you for playing!"
+msgstr "Thank you for playing!"
+
+msgid "Press Enter or Jump to start"
+msgstr "Press Enter or Jump to start"
+
+msgid "Test   hoge"
+msgstr "Test   hoge"
+
+msgid "Stage 1"
+msgstr "Stage 1"
+
+msgid "Nothing special, just"
+msgstr "Nothing special, just"
+
+msgid "take good care of me."
+msgstr "take good care of me."
+
+msgid "You might want to use some items."
+msgstr "You might want to use some items..."
+
+msgid "-Chikuwa"
+msgstr "                   -Chikuwa"
+
+msgid "[?] required "
+msgstr "           [?] required :)"
+
+msgid "-m9"
+msgstr "          (^Д^) -m9"
+
+msgid "Money money, dirty money.."
+msgstr "Money money, dirty money.."
+
+msgid "-Noshi"
+msgstr "                             (・ω・) -Noshi"
+
+msgid "The first block is hidden"
+msgstr "The first block is hidden"
+
+msgid "Take note!"
+msgstr "Take note!"
+
+msgid "I lovered the difficulty from the"
+msgstr "I lowered the difficulty from the"
+
+msgid "previous one. Take it easy."
+msgstr "previous one. Take it easy."
+
+msgid "-Chikuwa2"
+msgstr "                                    -Chikuwa"
+
+msgid "The enemy nearby jumps along"
+msgstr "The enemy nearby jumps along"
+
+msgid "with you."
+msgstr "with you."
+
+msgid "It's cute, and maybe useful.."
+msgstr "It's cute, and maybe useful.."
+
+msgid "I should bring an enemy"
+msgstr "I should bring an enemy"
+
+msgid "here so that it could"
+msgstr "here so that it could"
+
+msgid "help me crush the wall."
+msgstr "help me crush the wall."
+
+msgid "So easy. Not something to"
+msgstr "So easy. Not something to"
+
+msgid "rely on tips. Here, the"
+msgstr "rely on tips. Here, the"
+
+msgid "following is going quickly!"
+msgstr "following is going quickly!"
+
+msgid "The Genuine Final Stage"
+msgstr "The Genuine Final Stage"
+
+msgid "If this is really the ending,"
+msgstr "If this is really the ending,"
+
+msgid "should I come back from the pipes?"
+msgstr "should I come back from the pipes?"
+
+msgid "The floor is frozen and"
+msgstr "The floor is frozen and"
+
+msgid "really slippery."
+msgstr "really slippery."
+
+msgid "What? Me?"
+msgstr "What? Me?"
+
+msgid "Well, just passing"
+msgstr "Well, just passing"
+
+msgid "I tip the block"
+msgstr "I tip the block"
+
+msgid "Isn't it a strange block?"
+msgstr "Isn't it a strange block?"
+
+msgid "(Chip)"
+msgstr "                 (Chip)"
